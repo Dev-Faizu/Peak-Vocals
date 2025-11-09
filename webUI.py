@@ -282,4 +282,5 @@ for category, models in model_dict.items():
 
 
 webui = UVRWebUI(uvr, online_data_path='models/download_checks.json')
-webui.launch()
+
+webui.launch(server_name="0.0.0.0", server_port=int(os.getenv("PORT", 7860)))
